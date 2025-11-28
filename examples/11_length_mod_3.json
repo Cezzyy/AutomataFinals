@@ -1,0 +1,17 @@
+{
+  "name": "String Length Divisible by 3",
+  "description": "Accepts strings whose length is divisible by 3. Demonstrates modular counting independent of input symbols.",
+  "test_strings": {
+    "accept": ["", "000", "111", "abc", "010101", "aaaaaa"],
+    "reject": ["0", "00", "1", "01", "0000", "00000"]
+  },
+  "states": ["len0", "len1", "len2"],
+  "alphabet": ["0", "1"],
+  "transitions": {
+    "len0": {"0": "len1", "1": "len1"},
+    "len1": {"0": "len2", "1": "len2"},
+    "len2": {"0": "len0", "1": "len0"}
+  },
+  "start_state": "len0",
+  "final_states": ["len0"]
+}

@@ -1,0 +1,19 @@
+{
+  "name": "Minimization Demo - Redundant States",
+  "description": "A DFA with redundant/equivalent states. Use 'Minimize' button to reduce from 5 states to 3. Perfect for demonstrating the minimization algorithm.",
+  "test_strings": {
+    "accept": ["00", "100", "1100", "0100"],
+    "reject": ["0", "1", "01", "10"]
+  },
+  "states": ["A", "B", "C", "D", "E"],
+  "alphabet": ["0", "1"],
+  "transitions": {
+    "A": {"0": "B", "1": "A"},
+    "B": {"0": "C", "1": "A"},
+    "C": {"0": "C", "1": "A"},
+    "D": {"0": "E", "1": "D"},
+    "E": {"0": "E", "1": "D"}
+  },
+  "start_state": "A",
+  "final_states": ["C", "E"]
+}

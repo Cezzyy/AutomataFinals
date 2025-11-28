@@ -1,0 +1,17 @@
+{
+  "name": "No Consecutive 1s",
+  "description": "Accepts binary strings that do not contain '11' as a substring. Demonstrates rejection patterns.",
+  "test_strings": {
+    "accept": ["", "0", "1", "01", "10", "010", "101", "0101", "1010", "00100"],
+    "reject": ["11", "011", "110", "111", "0110", "1011", "1100"]
+  },
+  "states": ["ok", "saw1", "dead"],
+  "alphabet": ["0", "1"],
+  "transitions": {
+    "ok": {"0": "ok", "1": "saw1"},
+    "saw1": {"0": "ok", "1": "dead"},
+    "dead": {"0": "dead", "1": "dead"}
+  },
+  "start_state": "ok",
+  "final_states": ["ok", "saw1"]
+}

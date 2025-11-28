@@ -1,0 +1,16 @@
+{
+  "name": "Even Number of 1s",
+  "description": "Accepts binary strings with an even number of 1s (including zero 1s). Classic parity-checking DFA.",
+  "test_strings": {
+    "accept": ["", "0", "11", "00", "0110", "1001", "1111", "000"],
+    "reject": ["1", "10", "01", "111", "100", "001"]
+  },
+  "states": ["even", "odd"],
+  "alphabet": ["0", "1"],
+  "transitions": {
+    "even": {"0": "even", "1": "odd"},
+    "odd": {"0": "odd", "1": "even"}
+  },
+  "start_state": "even",
+  "final_states": ["even"]
+}

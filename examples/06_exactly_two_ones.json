@@ -1,0 +1,18 @@
+{
+  "name": "Exactly Two 1s",
+  "description": "Accepts binary strings with exactly two 1s. Shows counting with finite states.",
+  "test_strings": {
+    "accept": ["11", "011", "101", "110", "0011", "0101", "1001", "00110"],
+    "reject": ["", "0", "1", "10", "01", "111", "1111", "000"]
+  },
+  "states": ["zero", "one", "two", "dead"],
+  "alphabet": ["0", "1"],
+  "transitions": {
+    "zero": {"0": "zero", "1": "one"},
+    "one": {"0": "one", "1": "two"},
+    "two": {"0": "two", "1": "dead"},
+    "dead": {"0": "dead", "1": "dead"}
+  },
+  "start_state": "zero",
+  "final_states": ["two"]
+}

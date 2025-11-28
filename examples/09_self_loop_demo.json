@@ -1,0 +1,16 @@
+{
+  "name": "Self-Loop Demonstration",
+  "description": "DFA with self-loops on every state. Useful for showing how self-loop transitions are visualized.",
+  "test_strings": {
+    "accept": ["b", "ab", "aab", "aaab", "aaaab"],
+    "reject": ["", "a", "aa", "aaa", "ba", "aba"]
+  },
+  "states": ["q0", "q1"],
+  "alphabet": ["a", "b"],
+  "transitions": {
+    "q0": {"a": "q0", "b": "q1"},
+    "q1": {"a": "q0", "b": "q1"}
+  },
+  "start_state": "q0",
+  "final_states": ["q1"]
+}

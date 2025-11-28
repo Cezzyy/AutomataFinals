@@ -1,0 +1,17 @@
+{
+  "name": "Contains Substring 'ab'",
+  "description": "Accepts strings over {a, b} that contain 'ab' as a substring. Shows pattern matching with DFA.",
+  "test_strings": {
+    "accept": ["ab", "aab", "bab", "abb", "abab", "baab", "aaab"],
+    "reject": ["", "a", "b", "aa", "bb", "ba", "bba", "aaa"]
+  },
+  "states": ["start", "saw_a", "accept"],
+  "alphabet": ["a", "b"],
+  "transitions": {
+    "start": {"a": "saw_a", "b": "start"},
+    "saw_a": {"a": "saw_a", "b": "accept"},
+    "accept": {"a": "accept", "b": "accept"}
+  },
+  "start_state": "start",
+  "final_states": ["accept"]
+}

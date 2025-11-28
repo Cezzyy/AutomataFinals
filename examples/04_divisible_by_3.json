@@ -1,0 +1,17 @@
+{
+  "name": "Binary Number Divisible by 3",
+  "description": "Accepts binary numbers that are divisible by 3. States represent remainder when divided by 3. Great for explaining modular arithmetic with DFA.",
+  "test_strings": {
+    "accept": ["0", "11", "110", "1001", "1100", "1111", "10010"],
+    "reject": ["1", "10", "100", "101", "111", "1000"]
+  },
+  "states": ["r0", "r1", "r2"],
+  "alphabet": ["0", "1"],
+  "transitions": {
+    "r0": {"0": "r0", "1": "r1"},
+    "r1": {"0": "r2", "1": "r0"},
+    "r2": {"0": "r1", "1": "r2"}
+  },
+  "start_state": "r0",
+  "final_states": ["r0"]
+}
