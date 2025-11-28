@@ -10,7 +10,7 @@ A powerful PyQt5-based application for visualizing, debugging, and minimizing De
 
 ## Screenshots
 
-<img width="1919" height="1079" alt="Screenshot 2025-11-29 062553" src="https://github.com/user-attachments/assets/4ed651fc-0d12-400d-8e56-214a27ce6dfd" />
+![Automata Visualizer Pro](https://via.placeholder.com/800x500?text=Automata+Visualizer+Pro+Screenshot)
 
 ## Features
 
@@ -39,10 +39,18 @@ A powerful PyQt5-based application for visualizing, debugging, and minimizing De
 
 ```
 automata-visualizer-pro/
-├── main.py          # GUI application (View/Controller)
-├── dfa_logic.py     # DFA logic module (Model)
-├── README.md        # Documentation
-└── LICENSE          # MIT License
+├── run.py                 # Application launcher
+├── src/
+│   ├── __init__.py
+│   ├── main.py            # GUI application (View/Controller)
+│   └── dfa_logic.py       # DFA logic module (Model)
+├── examples/              # Sample DFA JSON files for testing
+│   ├── README.md
+│   └── *.json
+├── README.md              # Documentation
+├── LICENSE                # MIT License
+├── requirements.txt       # Python dependencies
+└── .gitignore
 ```
 
 ## Architecture
@@ -76,10 +84,10 @@ git clone https://github.com/yourusername/automata-visualizer-pro.git
 cd automata-visualizer-pro
 
 # Install dependencies
-pip install PyQt5
+pip install -r requirements.txt
 
 # Run the application
-python main.py
+python run.py
 ```
 
 ### Option 2: Virtual Environment (Recommended)
@@ -99,10 +107,10 @@ venv\Scripts\activate
 source venv/bin/activate
 
 # Install dependencies
-pip install PyQt5
+pip install -r requirements.txt
 
 # Run the application
-python main.py
+python run.py
 ```
 
 ## Usage
@@ -110,7 +118,7 @@ python main.py
 ### Starting the Application
 
 ```bash
-python main.py
+python run.py
 ```
 
 ### Workflow
@@ -167,10 +175,10 @@ python main.py
 
 ## API Reference
 
-### DFA Class (`dfa_logic.py`)
+### DFA Class (`src/dfa_logic.py`)
 
 ```python
-from dfa_logic import DFA, SAMPLE_DFA_DATA
+from src.dfa_logic import DFA, SAMPLE_DFA_DATA
 
 # Create from dictionary
 dfa = DFA.from_dict(data)
