@@ -8,10 +8,6 @@
 
 A powerful PyQt5-based application for visualizing, debugging, and minimizing Deterministic Finite Automata (DFA). Built with a clean MVC architecture for maintainability and extensibility.
 
-## Screenshots
-
-![Automata Visualizer Pro](https://via.placeholder.com/800x500?text=Automata+Visualizer+Pro+Screenshot)
-
 ## Features
 
 - **Interactive DFA Visualization**: Load DFA definitions from JSON and visualize them as beautiful, interactive state diagrams
