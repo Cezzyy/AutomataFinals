@@ -381,7 +381,6 @@ class MainWindow(QMainWindow):
         self.result_label.setText("Result: -")
         self.status_label.setText("Status: Ready - Press Step Forward to begin")
 
-
     def step_forward(self):
         if not self.dfa:
             QMessageBox.warning(self, "Warning", "Please load a DFA first!")

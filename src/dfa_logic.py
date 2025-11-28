@@ -46,14 +46,14 @@ class DFA:
         """Test if a string is accepted by the DFA. Returns (accepted, final_state, steps)."""
         state = self.start_state
         steps = [(state, None)]  # (state, symbol_consumed)
-        
+
         for char in test_str:
             next_state = self.get_transition(state, char)
             if next_state is None:
                 return False, state, steps  # Stuck - no valid transition
             state = next_state
             steps.append((state, char))
-        
+
         return state in self.final_states, state, steps
 
     def minimize(self):
