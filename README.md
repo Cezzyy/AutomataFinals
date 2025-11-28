@@ -10,7 +10,7 @@ A powerful PyQt5-based application for visualizing, debugging, and minimizing De
 
 ## Screenshots
 
-![Automata Visualizer Pro](<img width="1919" height="1079" alt="Screenshot 2025-11-29 062553" src="https://github.com/user-attachments/assets/dbd5bc59-18c0-4d31-93a4-a9371b5e4aab" />)
+<img width="1919" height="1079" alt="Screenshot 2025-11-29 062553" src="https://github.com/user-attachments/assets/4ed651fc-0d12-400d-8e56-214a27ce6dfd" />
 
 ## Features
 
